@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <style>
+            span{
+              color: rgb(247, 72, 14);
+                    font-weight: 500;
+            }
+        </style>
+</body>
+
+<app-nav-bar></app-nav-bar>
+<div class="main-reg">
+    <h3>LOGIN</h3>
+    <form class="row g-3 bg-light inner-reg" #userForm="ngForm" (ngSubmit)="submitForm(userForm)" action="RegApplication.html" novalidate>
+        <div class="col-md-12 form-group">
+          <label for="" class="form-label">Email:</label>
+          <input type="text" placeholder="Enter Your Email Address "
+           class="form-control" id=""  required  name="Email"  [(ngModel)]="emails"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #emailid="ngModel">
+           <span *ngIf="userForm.controls['Email'].touched && userForm.controls['Email'].hasError('required')">
+            Please enter a Email.
+          </span>
+          <span *ngIf="userForm.controls['Email'].touched && userForm.controls['Email'].hasError('pattern')">
+           Enter valid Email ID
+          </span>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="" class="form-label">Password:</label>
+          <input type="password" placeholder="Enter Your Password" class="form-control" id=""  required name="Password"  [(ngModel)]="pass" minlength="8" #password="ngModel" >
+          <span *ngIf="userForm.controls['Password'].touched && userForm.controls['Password'].hasError('required')">
+            Please enter a password.
+          </span>
+          <span *ngIf="userForm.controls['Password'].touched && userForm.controls['Password'].hasError('minlength')">
+            Password must be at least 8 characters long.
+          </span>
+        </div>
+         <div class="butt">
+            <button class="col-12 btn btn-primary as" type="submit">LOGIN</button>
+         </div>
+         <div class="forget">
+            <a type="button" href="Forget-Password" class="btn btn-link">Forget Password?</a>
+         </div>
+       
+    </form>
+</div>
+
+

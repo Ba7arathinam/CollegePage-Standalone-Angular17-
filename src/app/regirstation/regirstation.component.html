@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <!-- <link rel="stylesheet" href="@sweetalert2/theme-bulma/bulma.css"> -->
+
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registertration for Rajalakshmi_Engineering_College_</title>
+    <style>
+        span{
+            color: rgb(247, 72, 14);
+            font-weight: 500;
+        }
+  
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+
+</body>
+<app-nav-staff></app-nav-staff>
+<div class="main-reg">
+    <h2>REGISTATION</h2>
+    <form [formGroup]="reactiveeFrom" class="row g-3 bg-light inner-reg needs-validation form-group" novalidate name="login" (ngSubmit)="onsubmit($event)">
+        <div class="col-md-4">
+            <label for="" class="form-label">Name:</label>
+            <input type="text" formControlName="name" placeholder="Enter Your Name" name="name" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['name'].touched && reactiveeFrom.controls['name'].hasError('required')">
+                Please enter a name.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['name'].touched && reactiveeFrom.controls['name'].hasError('pattern')">
+               Name  contain only Alphabetics and it must be above 3 characters
+       
+              </span>
+          
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">DOB:</label>
+            <input type="date"  formControlName="dob" class="form-control" name="dob" id="" required>
+            <span *ngIf="reactiveeFrom.controls['dob'].touched && reactiveeFrom.controls['dob'].hasError('required')">
+                Please enter a date.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['dob'].touched && reactiveeFrom.controls['dob'].hasError('ageRange')">
+               Age Must be inbetween 16 - 20
+       
+              </span>
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">Email:</label>
+            <input type="email"  formControlName="emailid" name="emailid" placeholder="Enter Your Email" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['emailid'].touched && reactiveeFrom.controls['emailid'].hasError('required')">
+                Please enter a Email Id.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['emailid'].touched && reactiveeFrom.controls['emailid'].hasError('pattern')">
+               Enter Valid Mail Id
+              </span>
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">Contact Number:</label>
+            <input type="text" name="contact"  formControlName="contact" placeholder="Student Contact Number" class="form-control " required>
+            <span *ngIf="reactiveeFrom.controls['contact'].touched && reactiveeFrom.controls['contact'].hasError('required')">
+                Please enter a contact nummber.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['contact'].touched && reactiveeFrom.controls['contact'].hasError('pattern')">
+               Enter Valid Number
+              </span>
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">Father Name:</label>
+            <input type="text" name="fname"  formControlName="fname" placeholder="Enter Father Name" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['fname'].touched && reactiveeFrom.controls['fname'].hasError('required')">
+                Please enter a  Father Name.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['fname'].touched && reactiveeFrom.controls['fname'].hasError('pattern')">
+               Enter Valid Name
+              </span>
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">Mother Name:</label>
+            <input type="text" name="mname"  formControlName="mname" placeholder="Enter Mother Name" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['mname'].touched && reactiveeFrom.controls['mname'].hasError('required')">
+                Please enter a  Mother Name.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['mname'].touched && reactiveeFrom.controls['mname'].hasError('pattern')">
+               Enter Valid Name
+              </span>
+        </div>
+        <!-- <div class="col-md-4">
+            <label for="" class="form-label">Father Name:</label>
+            <input type="date" class="form-control" id="" value="Otto" >
+          </div> -->
+        <div class="col-md-4">
+            <label for="student-contact" class="form-label">Contact Number:</label>
+            <input type="text" name="fcontact"  formControlName="fcontact" placeholder="Father Contact Number" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['fcontact'].touched && reactiveeFrom.controls['fcontact'].hasError('required')">
+                Please enter a  Father Number.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['fcontact'].touched && reactiveeFrom.controls['fcontact'].hasError('pattern')">
+               Enter Valid Number
+              </span>
+        </div>
+
+        <div class="col-md-4">
+            <label for="" class="form-label">Contact Number:</label>
+            <input type="text" name="mcontact"  formControlName="mcontact" placeholder="Mother Contact Number" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.controls['mcontact'].touched && reactiveeFrom.controls['mcontact'].hasError('required')">
+                Please enter a  Mother Number.
+              </span>
+              <span *ngIf="reactiveeFrom.controls['mcontact'].touched && reactiveeFrom.controls['fcontact'].hasError('pattern')">
+               Enter Valid Number
+              </span>
+        </div>
+        <div class="col-md-2">
+            <label for="" class="form-label">10th Total Mark:</label>
+            <input type="number" name="mark1"  formControlName="mark1" placeholder="10th Mark" class="form-control" id="ten" required>
+            <span *ngIf="reactiveeFrom.get('mark1').hasError('required') && reactiveeFrom.get('mark1').touched">
+                Please enter your 10th Mark.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mark1').hasError('min') && reactiveeFrom.get('mark1').touched">
+                Required Mark is 300.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mark1').hasError('max') && reactiveeFrom.get('mark1').touched">
+                Maximum Mark is 500.
+              </span>
+        </div>
+        <div class="col-md-2">
+            <label for="" class="form-label">12th Total Mark:</label>
+            <input type="number" name="mark2" formControlName="mark2" placeholder="12th Mark" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.get('mark2').hasError('required') && reactiveeFrom.get('mark2').touched">
+                Please enter your 12th Mark.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mark2').hasError('min') && reactiveeFrom.get('mark2').touched">
+                Required Mark is 350.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mark2').hasError('max') && reactiveeFrom.get('mark2').touched">
+                Maximum Mark is 600.
+              </span>
+        </div>
+        <div class="col-md-2">
+            <label for="" class="form-label">Physics Mark:</label>
+            <input type="number" name="pmark" formControlName="pmark" placeholder="Physics Mark" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.get('pmark').hasError('required') && reactiveeFrom.get('pmark').touched">
+                Please enter your Physics Mark.
+              </span>
+              <span *ngIf="reactiveeFrom.get('pmark').hasError('min') && reactiveeFrom.get('pmark').touched">
+                Required Mark is 35.
+              </span>
+              <span *ngIf="reactiveeFrom.get('pmark').hasError('max') && reactiveeFrom.get('pmark').touched">
+                Maximum Mark is 100.
+              </span>
+        </div>
+        <div class="col-md-2">
+            <label for="" class="form-label">Chemistry Mark:</label>
+            <input type="number" name="cmark" formControlName="cmark" placeholder="Chemistry Mark" class="form-control" id="" required>
+            <span *ngIf="reactiveeFrom.get('cmark').hasError('required') && reactiveeFrom.get('cmark').touched">
+                Please enter your Chemistry Mark.
+              </span>
+              <span *ngIf="reactiveeFrom.get('cmark').hasError('min') && reactiveeFrom.get('cmark').touched">
+                Required Mark is 35.
+              </span>
+              <span *ngIf="reactiveeFrom.get('cmark').hasError('max') && reactiveeFrom.get('cmark').touched">
+                Maximum Mark is 100.
+              </span>
+        </div>
+        <div class="col-md-2">
+            <label for="" class="form-label">Maths Mark:</label>
+            <input type="number" name="mark5" formControlName="mmark" placeholder="Maths Mark" class="form-control" id="" required>
+          <span *ngIf="reactiveeFrom.get('mmark').hasError('required') && reactiveeFrom.get('mmark').touched">
+                Please enter your Maths Mark.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mmark').hasError('min') && reactiveeFrom.get('mmark').touched">
+                Required Mark is 35.
+              </span>
+              <span *ngIf="reactiveeFrom.get('mmark').hasError('max') && reactiveeFrom.get('mmark').touched">
+                Maximum Mark is 100.
+              </span>
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">12th Mark Sheet:</label>
+            <input type="file" formControlName="file" placeholder="Mark Sheet"  class="form-control" id="" required
+                accept=".doc,.docx,.pdf,.png,.jpg">
+            <div class="red-msg">
+
+            </div>
+        </div>
+        <div class="butt">
+            <button class="col-12 btn btn-primary" type="submit">SUBMIT</button>
+        </div>
+</form>
+

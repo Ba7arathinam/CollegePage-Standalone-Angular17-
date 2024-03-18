@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.module {
+background: url(https://www.addressguru.in/images/1595567151.png);
+background-attachment: fixed;
+width: 40%;
+height: 350px;
+position: relative;
+overflow: hidden;
+margin: 20px;
+}
+.module > header {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 20px 10px;
+background: inherit;
+background-attachment: fixed;
+}
+.module > header::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background:rgb(139, 36, 235);
+background-attachment: fixed;
+-webkit-filter: blur(12px);
+filter: blur(12px);
+transform: scale(2) translateY(20px);
+}
+.module > header > h1 {
+margin: 0;
+color: rgb(240, 232, 232);
+position: relative;
+font-family: 'Roboto Condensed', sans-serif;
+z-index: 1;
+}
+
+* {
+box-sizing: border-box;
+font-family: 'Roboto Condensed', sans-serif;
+}
+h4,pre{
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+h4{
+color: rgb(139, 36, 235);;
+}
+
+
+
+.side2{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+a{
+    margin-right: 1rem;
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+.markq {
+    font-family: 'Teko', sans-serif;
+    text-indent: 2px;
+    font-size: large;
+    margin: 10px 0px 10px 0px;
+}
+
+.log-reg {
+    display: flex;
+    text-align: center;
+
+}
+
+.log {
+    border: none;
+    color: rgb(139, 36, 235);
+    font-weight: 414;
+}
+
+.log:hover {
+    background-color: rgb(139, 36, 235, .6);
+    color: rgb(7, 7, 7);
+    font-size: large;
+    font-weight: 500;
+}
+
+.slide-top {
+    color: rgb(5, 5, 5);
+}
+
+.cards {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.card-topic {
+    color: rgb(139, 36, 235);
+
+}
+
+.card-header {
+    font-weight: 700;
+    color: black;
+    background-color: rgb(139, 36, 235, .6);
+}
+
+.code-1 {
+    display: flex;
+    justify-content: space-evenly;
+}

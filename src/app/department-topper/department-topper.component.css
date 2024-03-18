@@ -1,0 +1,87 @@
+.all-dept {
+    margin: 5%;
+}
+
+.abt2,
+.dept-card {
+    width: 1000px;
+    /* display: flex;
+  flex-direction: row; */
+    /* margin-bottom: 10px; */
+
+}
+
+.dept-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.dept-card:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.abt2:hover {
+    /* min-width: 260%;
+    min-height: 500%;
+    font-weight: 900; */
+}
+
+.dpt-img {
+
+    height: auto;
+}
+
+.card {
+
+    width: 25%;
+}
+
+.dept-name,
+.all-event {
+    /* color: rgb(139, 36, 235); */
+    font-family: 'Teko', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 1%;
+    font-family: 'Teko', sans-serif;
+    color: rgb(139, 36, 235);
+    ;
+}
+
+/* department end  */
+
+
+
+
+.all-dept {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+
+
+
+.dpt-img {
+    width: fit-content;
+    height: 200px;
+    margin-bottom: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.dpt-img:hover {
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    height: 210px;
+}
+
+.dept-name {
+    text-align: center;
+}
+h5{
+text-align: center;
+}
+h2{
+text-align: start;
+}

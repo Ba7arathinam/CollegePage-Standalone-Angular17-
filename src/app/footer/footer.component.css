@@ -1,0 +1,28 @@
+.card-footer {
+    margin-top: 120px;
+}
+
+.foot-img-1 {
+    width: 10%;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.paa {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.foot-last {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.foot-3 {
+    margin-left: 35%;
+}
+i{
+    padding: 3px;
+}
